@@ -1,0 +1,42 @@
+﻿body {
+    background-color: #232323;
+}
+
+
+.square{
+    width: 30%;
+ 
+    padding-bottom:30%;
+    float:left;
+    margin:1.66%;
+    border-radius:10px;
+}
+h1{
+    color:white;
+}
+
+#color{
+    margin: 0 auto;
+    max-width:600px;
+}
+
+#top{
+    text-align:center;
+    background-color:steelblue;
+    
+}
+
+.form-inline {
+    margin: 0 auto;
+    
+}
+.btn, #message{
+    color: steelblue;
+    font-weight:bold;
+}
+
+.over{
+    background-color: steelblue;
+    
+}
+
