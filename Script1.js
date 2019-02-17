@@ -59,7 +59,7 @@ function easy() {
     document.getElementById("top").style.backgroundColor = "steelblue";
     document.querySelector("#rgb").textContent = color.slice(3, color.length);
     document.getElementById("message").textContent = " ";
-    var level = easy;
+    level = "easy";
 }
 
 document.querySelector(".hard").addEventListener("click", hardHelper);
@@ -84,13 +84,22 @@ function hard() {
 
     document.querySelector("#rgb").textContent = color.slice(3, color.length);
     document.getElementById("message").textContent = " ";
+    level = "hard";
 }
 
 
 function colorChange() {
 
-    for (var i = 0; i < sq.length; i++) {
-        sq[i].style.backgroundColor = color;
+    if (level == "easy") {
+
+        for (var i = 0; i < 3; i++) {
+            sq[i].style.backgroundColor = color;
+        }
+    }
+    else {
+        for (var i = 0; i < sq.length; i++) {
+            sq[i].style.backgroundColor = color;
+        }
     }
     document.getElementById("top").style.backgroundColor = color;
 }
