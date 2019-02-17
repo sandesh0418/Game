@@ -26,6 +26,7 @@ for (var i = 0; i < sq.length; i++) {
         if (this.style.backgroundColor === color) {
             document.getElementById("message").textContent = "Correct!";
             colorChange();
+            document.querySelector(".change").textContent = "Play Again?";
         }
         else {
             this.style.backgroundColor = "#232323";
@@ -33,6 +34,8 @@ for (var i = 0; i < sq.length; i++) {
         }
     });
 }
+
+
 
 document.querySelector(".easy").addEventListener("click", helper);
 
@@ -111,6 +114,9 @@ function pickColor() {
 }
 
 document.querySelector(".change").addEventListener("click", function () {
+    if (document.querySelector(".change").textContent == "Play Again?") {
+        document.querySelector(".change").textContent = "NEW COLORS";
+    }
     if (level == "easy") {
         helper();
     }
