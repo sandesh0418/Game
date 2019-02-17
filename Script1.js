@@ -27,6 +27,7 @@ for (var i = 0; i < sq.length; i++) {
             document.getElementById("message").textContent = "Correct!";
             colorChange();
             document.querySelector(".change").textContent = "Play Again?";
+            document.querySelector("footer").style.backgroundColor = this.style.backgroundColor;
         }
         else {
             this.style.backgroundColor = "#232323";
@@ -57,7 +58,7 @@ function easy() {
 
     document.querySelector(".hard").style.backgroundColor = "white";
     document.querySelector(".hard").style.color = "steelblue";
-
+    
     color = colors[Math.floor(Math.random() * 3)];
     document.getElementById("top").style.backgroundColor = "steelblue";
     document.querySelector("#rgb").textContent = color.slice(3, color.length);
@@ -82,6 +83,7 @@ function hard() {
     document.querySelector(".hard").style.color = "white";
     document.querySelector(".easy").style.backgroundColor = "white";
     document.querySelector(".easy").style.color = "steelblue";
+    
     color = pickColor();
     document.getElementById("top").style.backgroundColor = "steelblue";
 
@@ -114,6 +116,7 @@ function pickColor() {
 }
 
 document.querySelector(".change").addEventListener("click", function () {
+    document.querySelector("footer").style.backgroundColor = "steelblue";
     if (document.querySelector(".change").textContent == "Play Again?") {
         document.querySelector(".change").textContent = "NEW COLORS";
     }
